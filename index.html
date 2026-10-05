@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Перегляд добірки Editor's Choice зображень Pixabay." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="gallery-app">
+      <header class="page-header"> 
+      </header>
+
+      <form class="key-form" id="api-key-form">
+        <label for="api-key">API-ключ Pixabay</label>
+        <div class="key-controls">
+          <input id="api-key" name="apiKey" type="password" autocomplete="off" required placeholder="Введіть свій API-ключ" />
+          <button class="button button-dark" type="submit">Застосувати ключ</button>
+        </div>
+        <p class="form-note"><a href="https://pixabay.com/service/about/api/" target="_blank" rel="noopener noreferrer">Довідка API та отримання ключа</a></p>
+      </form>
+
+      <p class="status" id="status" role="status" aria-live="polite">Введіть API-ключ, щоб завантажити зображення.</p>
+      <section class="gallery" id="gallery" aria-label="Зображення вибору редакції"></section>
+
+      <div class="pagination">
+        <span class="page-count" id="page-count"></span>
+        <button class="button button-accent" id="load-more" type="button" hidden>Завантажити ще</button>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
